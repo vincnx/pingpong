@@ -46,8 +46,7 @@ int main(){
 }
 
 void _1p(){
-    srand(time(NULL));
-    int i, j, key, rand_num;
+    int i, j, key;
     Base player[2];
     Ball ball;
     player[0].x = 6;
@@ -71,7 +70,6 @@ void _1p(){
     
     while(player[0].point + player[1].point != 5){
         a: 
-        rand_num = rand() % 10 + 1;
         system("cls");
         draw_map(25, 75);
         draw_ball(ball);
@@ -114,12 +112,6 @@ void _1p(){
         delay();
     }
 }
-
-
-
-
-
-
 
 
 void _2p(){
@@ -193,7 +185,7 @@ void draw_point(Base player){
     gotoxy(80, 12);
     printf("score :");
     gotoxy(80, 13 + player.num);
-    printf("player %i : %i  %i", player.num, player.point, play);
+    printf("player %i : %i", player.num, player.point);
 }
 
 
